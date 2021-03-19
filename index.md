@@ -1,37 +1,6 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/jcillay/cs152-project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jcillay/cs152-project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<h1> 
+  <b>Introduction</b> 
+</h1>
+  <p> 
+Reinforcement learning has become one of the most prolific techniques within artificial intelligence. In our project, we will be taking advantage of this technique to teach an agent how to navigate a virtual maze with directional arrows using deep reinforcement learning. These directional arrows will be placed on the walls and will dictate which way for the agent to go to reach the final goal state – which is signified as a purple wall at the end of the maze. We chose to use deep reinforcement learning to solve this problem because it allows us to easily train our agent by breaking down the path towards our goal state into a series of moves that are signified as being either good (moving towards the goal state) or bad (moving away from the goal state). To accomplish this task, we will be using a variety of previous work done on the topic. Specifically, Dr. Anthony Clark’s research on the creation of the virtual maze and his existing program for it. To implement reinforcement learning on the existing program, we will use the toolkit known as OpenAI Gym – an open source toolkit that allows developers to implement different algorithms on the existing programs in certain environments. In our process of using OpenAI Gym we will be using the existing numerical computation library of either TensorFlow or Theano. In addition to these resources, we will reference previous work done on related projects, such as, “Deep Reinforcement Learning for Instruction Following Visual Navigation in 3D Maze-like Environments” (Devo, Costante, and Valigi, 2006), and “Building an AI to Navigate a Maze” (Engstrom, 2019). These projects will give us an idea of how to structure our algorithm and perform RL on our agent. Furthermore, we will use research articles like “Reinforcement Learning Explained: Overview, Comparisons and Applications in Business” (altexsoft, 2019) and “Learning to Navigate in Complex Environments” (Mirowski, 2017) to give us a deeper understanding of RL and navigation problems as a whole. Upon completion of our project, we may attempt to expand the scope of our project to include solving the maze without arrows, and even experiment with different virtual maze textures – if time allows. This project is being done with the hopes that it will contribute to the ultimate goal of Dr. Anthony Clark’s research, which is to have a robot be able to traverse and navigate Pomona College’s campus successfully and unharmed.
+  </p>
