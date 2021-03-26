@@ -1,7 +1,3 @@
-<style type="text/css">
- .tab { margin-left: 40px; }
-</style>
-
 <h1> 
   <b>Introduction</b> 
 </h1>
