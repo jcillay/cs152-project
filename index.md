@@ -18,8 +18,8 @@ To accomplish this task, we will be using a variety of previous work done on the
  
 <h1>What is Reinforcement Learning?</h1>
 <p>
-Though it is touched on briefly in our introduction, it is important as a reader to understand exactly what RL  is. According to<a> href=https://deepsense.ai/what-is-reinforcement-learning-the-complete-guide/> deepsenseai</a> (2018), it is the training of machine learning models to make a sequence of decisions. It is, in essence, a game in which a machine uses rewards to find the solution to the game at hand. 
-In summary, RL can be broken down into 6 major generic steps:
+Though it is touched on briefly in our introduction, it is important as a reader to understand exactly what RL  is. According to<a href=https://deepsense.ai/what-is-reinforcement-learning-the-complete-guide/> deepsenseai</a> (2018), it is the training of machine learning models to make a sequence of decisions. It is, in essence, a game in which a machine uses rewards to find the solution to the game at hand. 
+In summary, RL can be broken down into <a href="https://www.learndatasci.com/tutorials/reinforcement-q-learning-scratch-python-openai-gym/">6 major generic steps</a>:
 <ul>
   <li>Observing an environment</li>
   <li> Deciding how the agent is to act based on a particular strategy <\li>
@@ -28,7 +28,7 @@ In summary, RL can be broken down into 6 major generic steps:
   <li>Teaching the agent to learn from its actions based on the rewards/penalties it has received <\li>
   <li> Continue teaching the agent until it finds the optimal strategy to solve the problem <\li>
 </ul>
-https://www.learndatasci.com/tutorials/reinforcement-q-learning-scratch-python-openai-gym/ (Martin and Kansal)
+
 The idea of RL has been around since the 1960s and can be applied to millions of different situations in both real life and simulated environments. 
 </p>
 
@@ -43,7 +43,7 @@ Our initial idea for this project was to train our agent using Q-learning which 
 </p>
 
 <p>
-We based our Q-learning model off of the videos and work done by Thomas Simonini (https://simoninithomas.github.io/deep-rl-course/) in which he creates a taxi agent that learns to navigate in a city with the goal of transporting its passengers to the correct location. This existing model stood out to us because the problem it solves is so similar to ours. However, our environment was too complex for us to successfully apply Q-learning (based on our limited knowledge of the topic.) This was mainly due to the fact that our environment had about 100,000 different states whereas the taxi example only had 10,000 possible states. Therefore our implementation of Q-learning was unsuccessful.
+We based our Q-learning model off of the videos and work done by <a href=https://simoninithomas.github.io/deep-rl-course/>Thomas Simonini</a> in which he creates a taxi agent that learns to navigate in a city with the goal of transporting its passengers to the correct location. This existing model stood out to us because the problem it solves is so similar to ours. However, our environment was too complex for us to successfully apply Q-learning (based on our limited knowledge of the topic.) This was mainly due to the fact that our environment had about 100,000 different states whereas the taxi example only had 10,000 possible states. Therefore our implementation of Q-learning was unsuccessful.
 </p>
 
 <h3><b>Deep Q-learning</b></h3>
@@ -52,12 +52,12 @@ After our attempt to implement Q-learning, we moved onto a more complex subject 
 </p>
 
 <p>
-In our implementation of DQN on our agent we tried to follow examples done by Stable-Baselines3(https://stable-baselines3.readthedocs.io/en/master/), which is a set of sourced RL algorithms implemented with PyTorch. We used their DQN algorithm on our agent to have the agent ‘learn’ the maze. To learn the maze required the agent to take many steps, so we felt training our agent on 1,000, 50,000, and 200,000 timesteps would suffice. After the agent is done learning, we would test the agent in the maze and record the results/ time it took for the agent to find the goal state. 
+In our implementation of DQN on our agent we tried to follow examples done by <a href=https://stable-baselines3.readthedocs.io/en/master/>Stable-Baselines3</a>, which is a set of sourced RL algorithms implemented with PyTorch. We used their DQN algorithm on our agent to have the agent ‘learn’ the maze. To learn the maze required the agent to take many steps, so we felt training our agent on 1,000, 50,000, and 200,000 timesteps would suffice. After the agent is done learning, we would test the agent in the maze and record the results/ time it took for the agent to find the goal state. 
 </p>
 
 <h3><b>A2C</b></h3>
 <p>
-Since we wanted to test our agent on multiple algorithms, the next one we chose to do was A2C. A2C(https://arxiv.org/abs/1602.01783) is an algorithm from Stable-Baselines3 that also uses deep RL, but uses asynchronous gradient descent to optimize the deep neural network controllers. To measure the performance of this algorithm, we will want to follow similar procedures above in which the agent learns on a variety of timesteps, measures the time it took, and then applies then tests the trained agent on its performance in the maze. 
+Since we wanted to test our agent on multiple algorithms, the next one we chose to do was A2C. <a href=https://arxiv.org/abs/1602.01783>A2C</a> is an algorithm from Stable-Baselines3 that also uses deep RL, but uses asynchronous gradient descent to optimize the deep neural network controllers. To measure the performance of this algorithm, we will want to follow similar procedures above in which the agent learns on a variety of timesteps, measures the time it took, and then applies then tests the trained agent on its performance in the maze. 
 </p>
 
 <h3><b>Rewards</b></h3>
@@ -89,7 +89,11 @@ We understand our results would not likely be reproduced again if sufficient cod
 <h1><b>Discussion</b></h1>
   <p>
 The goal of our work was to implement an algorithm that would teach an agent how to navigate a virtual maze. Our algorithm was then to be evaluated on the efficiency of our agent solving the maze (percentage of best possible moves taken and what percentage of iterations are able to successfully solve the maze). The maze includes a start position, arrows on walls indicating which direction to turn at a wall, and a goal state at the end of the maze. The position of the start state, goal state, and configuration of the maze are random on each iteration. This algorithm was then to be applied to the work of Dr. Anthony Clark. Therefore, the more overarching goal of our work was to contribute to Dr. Clark’s ongoing research on creating a physical robot that can successfully navigate real world terrain -particularly the terrain of Pomona College in Claremont, CA. 
+ </p>
+ <p>
 Unfortunately, we did not succeed in training our agent to reliably navigate the virtual maze. That is not to say our work was without merit. We gained valuable knowledge in RL, a crucial subfield within Machine Learning and a technique with vast applications. Additionally, our failures with particular RL strategies allowed us to research and attempt to apply various RL algorithms which gave us a much more varied and holistic understanding of RL overall. As often is the case, our failures likely taught us much more than instant success with the first approach we tried would have.
+</p>
+<p>
 Ethically, the direct application of our work has few implications. The possible application of RL into a real world robot is where most ethical considerations come into play. The development of robots in general has the ability to vastly alter the way society operates. While it may seem harmless to develop a robot whose job it is to be able to walk around a college campus, it is important to consider nefarious ways in which the same technology could be utilized. For example, efficiently mobile robots have the ability to displace workers in the future and even be weaponized for military purposes. However, It is safe to say that will the many thousands of people researching robots around the world, the goals of this research are among the most innocent and have the least amount of chance to result in harm. 
  </p>
  
