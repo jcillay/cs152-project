@@ -159,7 +159,6 @@ Finally, we were confused about what package we should use. We originally spent 
 <h1>
   Project Video!
 </h1>
-<html>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/6sxCFZ8_d84"></iframe>
-</html>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6sxCFZ8_d84"> </iframe>
+
 
