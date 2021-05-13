@@ -16,7 +16,7 @@ To accomplish this task, we will be using a variety of previous work done on the
   <li> <a href="https://simoninithomas.github.io/deep-rl-course/">This</a> deep learning course (Thomas), which provided the baseline for our understanding of RL and algorithms such as Q-learning, Deep Q-learning, and A2C. In addition, it helped us with PyTorch implementations and gave us many examples of RL projects. It was essentially the starting point of our project. We supplemented the background knowledge from Thomas along with articles from <a href="https://towardsdatascience.com">Towards Data Science</a> to provide us with additional information.
    <li> Also projects such as <a href="https://ieeexplore.ieee.org/abstract/document/8957297?casa_token=JTVW2Y0EiC0AAAAA:27v7m8lyZQv2Fzr_z1g_7siXz9q38bC3Y0o8gjPa3zc63nFnDR8AEF7hdET8vkxC8jyqhq8kPi0">“Deep Reinforcement Learning for Instruction Following Visual Navigation in 3D Maze-like Environments”</a> (Devo, Costante, and Valigi, 2006) or <a href="https://magnus-engstrom.medium.com/building-an-ai-to-navigate-a-maze-899bf03f224d">“Building an AI to Navigate a Maze”</a> (Engstrom, 2019), helped immensely. These projects have closely related goals to ours. They helped us understand different approaches to teaching agents to navigate a maze and what we would need to consider when implementing our own algorithm(s).
     <li> And finally <a href="https://www.altexsoft.com/blog/datascience/reinforcement-learning-explained-overview-comparisons-and-applications-in-business/">“Reinforcement Learning Explained: Overview, Comparisons and Applications in Business”</a> (Altexsoft, 2019) and <a href="https://openreview.net/pdf?id=SJMGPrcle">“Learning to Navigate in Complex Environments”</a> (Mirowski, 2017) gave us additional background knowledge on RL algorithms and problems concerned with navigating an environment. They helped us wrap our brain around the problem we would be attempting to tackle as well.
-</ul>
+
 
 <h1>
   What is Reinforcement Learning?
@@ -33,7 +33,7 @@ In summary, RL can be broken down into <a href="https://www.learndatasci.com/tut
   <li> Awarding the agent with a reward or penalizing the agent for bad actions 
   <li>Teaching the agent to learn from its actions based on the rewards/penalties it has received 
   <li> Continue teaching the agent until it finds the optimal strategy to solve the problem 
-</ul>
+
 <p>
 The idea of RL has been around since the 1960s and can be applied to millions of different situations in both real life and simulated environments. 
 </p>
