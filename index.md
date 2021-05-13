@@ -26,6 +26,7 @@ To accomplish this task, we will be using a variety of previous work done on the
 Though it is touched on briefly in our introduction, it is important as a reader to understand exactly what RL is. According to <a href="https://deepsense.ai/what-is-reinforcement-learning-the-complete-guide/">deepsenseai</a> (2018), it is the training of machine learning models to make a sequence of decisions. It is, in essence, a game in which a machine uses rewards to find the solution to the game at hand. 
 In summary, RL can be broken down into <a href="https://www.learndatasci.com/tutorials/reinforcement-q-learning-scratch-python-openai-gym/">6 major generic steps</a>:
 </p>
+<p>
 <ul>
   <li>Observing an environment
   <li> Deciding how the agent is to act based on a particular strategy
@@ -33,7 +34,8 @@ In summary, RL can be broken down into <a href="https://www.learndatasci.com/tut
   <li> Awarding the agent with a reward or penalizing the agent for bad actions 
   <li>Teaching the agent to learn from its actions based on the rewards/penalties it has received 
   <li> Continue teaching the agent until it finds the optimal strategy to solve the problem 
-
+</ul>
+</p>
 <p>
 The idea of RL has been around since the 1960s and can be applied to millions of different situations in both real life and simulated environments. 
 </p>
