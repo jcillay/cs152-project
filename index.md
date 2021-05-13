@@ -156,3 +156,8 @@ We spent a lot of time reading about different applications and techniques of RL
 Finally, we were confused about what package we should use. We originally spent time applying Stable Baselines 1 to our environment, but then found out that that version was out of date, and that was why it wasn’t working with our program. We then switched to Stable Baselines 3 and finally got our program to run. If we had more time to work on the project, we would continue to implement our RL algorithm, focusing specifically on our reward system. From there, we would continue to test out different algorithms to see which one was most efficient.
 </p>
 
+<h1>
+  Project Video!
+</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6sxCFZ8_d84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
