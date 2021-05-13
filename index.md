@@ -30,12 +30,12 @@ In summary, RL can be broken down into <a href="https://www.learndatasci.com/tut
 </p>
 <p>
 <ul>
-  <li>Observing an environment
-  <li> Deciding how the agent is to act based on a particular strategy
-  <li> Making sure that the agent acts in accordance with the strategy 
-  <li> Awarding the agent with a reward or penalizing the agent for bad actions 
-  <li>Teaching the agent to learn from its actions based on the rewards/penalties it has received 
-  <li> Continue teaching the agent until it finds the optimal strategy to solve the problem 
+  <li>Observing an environment</li>
+  <li> Deciding how the agent is to act based on a particular strategy</li>
+  <li> Making sure that the agent acts in accordance with the strategy</li>
+  <li> Awarding the agent with a reward or penalizing the agent for bad actions</li>
+  <li>Teaching the agent to learn from its actions based on the rewards/penalties it has received</li>
+  <li> Continue teaching the agent until it finds the optimal strategy to solve the problem</li>
 </ul>
 </p>
 <p>
