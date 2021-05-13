@@ -17,19 +17,15 @@ To accomplish this task, we will be using a variety of previous work done on the
    <li> Also projects such as <a href="https://ieeexplore.ieee.org/abstract/document/8957297?casa_token=JTVW2Y0EiC0AAAAA:27v7m8lyZQv2Fzr_z1g_7siXz9q38bC3Y0o8gjPa3zc63nFnDR8AEF7hdET8vkxC8jyqhq8kPi0">“Deep Reinforcement Learning for Instruction Following Visual Navigation in 3D Maze-like Environments”</a> (Devo, Costante, and Valigi, 2006) or <a href="https://magnus-engstrom.medium.com/building-an-ai-to-navigate-a-maze-899bf03f224d">“Building an AI to Navigate a Maze”</a> (Engstrom, 2019), helped immensely. These projects have closely related goals to ours. They helped us understand different approaches to teaching agents to navigate a maze and what we would need to consider when implementing our own algorithm(s).
     <li> And finally <a href="https://www.altexsoft.com/blog/datascience/reinforcement-learning-explained-overview-comparisons-and-applications-in-business/">“Reinforcement Learning Explained: Overview, Comparisons and Applications in Business”</a> (Altexsoft, 2019) and <a href="https://openreview.net/pdf?id=SJMGPrcle">“Learning to Navigate in Complex Environments”</a> (Mirowski, 2017) gave us additional background knowledge on RL algorithms and problems concerned with navigating an environment. They helped us wrap our brain around the problem we would be attempting to tackle as well.
 </ul>
- 
-  
-  
-<a href="https://ieeexplore.ieee.org/abstract/document/8957297?casa_token=JTVW2Y0EiC0AAAAA:27v7m8lyZQv2Fzr_z1g_7siXz9q38bC3Y0o8gjPa3zc63nFnDR8AEF7hdET8vkxC8jyqhq8kPi0" >“Deep Reinforcement Learning for Instruction Following Visual Navigation in 3D Maze-like Environments”</a> (Devo, Costante, and Valigi, 2006), and <a href="https://magnus-engstrom.medium.com/building-an-ai-to-navigate-a-maze-899bf03f224d" >“Building an AI to Navigate a Maze”</a> (Engstrom, 2019). These projects will give us an idea of how to structure our algorithm and perform RL on our agent. Furthermore, we will use research articles like <a href="https://www.altexsoft.com/blog/datascience/reinforcement-learning-explained-overview-comparisons-and-applications-in-business/" >“Reinforcement Learning Explained: Overview, Comparisons and Applications in Business”</a> (altexsoft, 2019) and <a href="https://openreview.net/pdf?id=SJMGPrcle" >“Learning to Navigate in Complex Environments”</a> (Mirowski, 2017) to give us a deeper understanding of RL and navigation problems as a whole. 
-</p>
+
+<h1>
+  What is Reinforcement Learning?
+</h1>
+
 <p>
-  This project is being done with the hopes that it will contribute to the ultimate goal of Dr. Anthony Clark’s research, which is to have a robot be able to traverse and navigate Pomona College’s campus successfully and unharmed.
-</p>
- 
-<h1>What is Reinforcement Learning?</h1>
-<p>
-Though it is touched on briefly in our introduction, it is important as a reader to understand exactly what RL  is. According to<a href=https://deepsense.ai/what-is-reinforcement-learning-the-complete-guide/> deepsenseai</a> (2018), it is the training of machine learning models to make a sequence of decisions. It is, in essence, a game in which a machine uses rewards to find the solution to the game at hand. 
+Though it is touched on briefly in our introduction, it is important as a reader to understand exactly what RL is. According to <a href="https://deepsense.ai/what-is-reinforcement-learning-the-complete-guide/">deepsenseai</a> (2018), it is the training of machine learning models to make a sequence of decisions. It is, in essence, a game in which a machine uses rewards to find the solution to the game at hand. 
 In summary, RL can be broken down into <a href="https://www.learndatasci.com/tutorials/reinforcement-q-learning-scratch-python-openai-gym/">6 major generic steps</a>:
+</p>
 <ul>
   <li>Observing an environment
   <li> Deciding how the agent is to act based on a particular strategy
@@ -38,7 +34,7 @@ In summary, RL can be broken down into <a href="https://www.learndatasci.com/tut
   <li>Teaching the agent to learn from its actions based on the rewards/penalties it has received 
   <li> Continue teaching the agent until it finds the optimal strategy to solve the problem 
 </ul>
-
+<p>
 The idea of RL has been around since the 1960s and can be applied to millions of different situations in both real life and simulated environments. 
 </p>
 
