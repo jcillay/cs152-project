@@ -38,35 +38,58 @@ In summary, RL can be broken down into <a href="https://www.learndatasci.com/tut
 The idea of RL has been around since the 1960s and can be applied to millions of different situations in both real life and simulated environments. 
 </p>
 
-<h1> <b>Methods</b> </h1>
+<h1> 
+  <b>
+    Methods
+  </b> 
+</h1>
 <p>
-The goal of our project, as explained above is to implement a reinforcement learning algorithm onto an agent to solve a customized maze.  To do this we attempted to teach this agent and use a variety of different reinforcement learning techniques including Q-learning, Deep Learning, and A2C. These methods will be explained below.
+The goal of our project, as explained above is to implement a reinforcement learning algorithm onto an agent to solve a customized maze. To do this we attempted to teach this agent and use a variety of different reinforcement learning techniques including Q-learning, Deep Learning, and A2C. These methods will be explained below.
 </p>
 
-<h3><b>Q-learning</b> </h3>
+<h3>
+  <b>
+    Q-learning
+  </b> 
+</h3>
 <p>
-Our initial idea for this project was to train our agent using Q-learning which is one of the most basic forms of reinforcement learning and one that is well-suited for beginners using RL. Q-learning works so an agent picks an action to go towards a particular state and receives a value from that state. The value depends on the value the state has in the Q-table which is updated as the agent moves. If a negative value is associated with that state, then it will be translated to the Q-table and vice versa with a positive value. After Q-learning training, theoretically, the agent will have found the most optimal rewarding path to its goal state. 
+Our initial idea for this project was to train our agent using Q-learning which is one of the most basic forms of reinforcement learning and one that is well-suited for beginners using RL. Q-learning works so an agent picks an action to go towards a particular state and receives a value from that state. The value depends on the value the state has in the Q-table which is updated as the agent moves. If a negative value is associated with that state, then it will be translated to the Q-table and vice versa with a positive value. After Q-learning training, theoretically, the agent will have found the most optimal rewarding path to its goal state.
 </p>
 
 <p>
-We based our Q-learning model off of the videos and work done by <a href=https://simoninithomas.github.io/deep-rl-course/>Thomas Simonini</a> in which he creates a taxi agent that learns to navigate in a city with the goal of transporting its passengers to the correct location. This existing model stood out to us because the problem it solves is so similar to ours. However, our environment was too complex for us to successfully apply Q-learning (based on our limited knowledge of the topic.) This was mainly due to the fact that our environment had about 100,000 different states whereas the taxi example only had 10,000 possible states. Therefore our implementation of Q-learning was unsuccessful.
+We based our Q-learning model off of the videos and work done by <a href="https://simoninithomas.github.io/deep-rl-course/">Thomas Simonini</a> in which he creates a taxi agent that learns to navigate in a city with the goal of transporting its passengers to the correct location. This existing model stood out to us because the problem it solves is so similar to ours. However, our environment was too complex for us to successfully apply Q-learning (based on our limited knowledge of the topic.) This was mainly due to the fact that our environment had about 100,000 different states whereas the taxi example only had 10,000 possible states. Therefore our implementation of Q-learning was unsuccessful.
 </p>
 
-<h3><b>Deep Q-learning</b></h3>
+<h3>
+  <b>
+    Deep Q-learning
+  </b>
+</h3>
 <p>
-After our attempt to implement Q-learning, we moved onto a more complex subject of deep called deep Q-learning (DQN). DQN at its simplest, is using the same Q-learning approach as described above, but now neural networks are used! The neural networks help to approximate the Q-value function, by taking just the state as input and then producing the best possible move based on the Q-value score.
+After our attempt to implement Q-learning, we moved onto a more complex subject of deep learning called deep Q-learning (DQN). DQN at its simplest, is using the same Q-learning approach as described above, but now neural networks are used. The neural networks help to approximate the Q-value function, by taking the state as input and then producing the best possible move based on the Q-value score. This approach made a lot of sense to us. Since DQN can take the frames of the max as input and then output a vector of possible actions in this state. Then we could just take the biggest Q-value of the vector to tell our agent what the best action is. As our agent learns, it would be able to identify which frames are associated with the best action to perform. We thought that having frames as the input was particularly useful since the walls have arrows indicating which direction to go once the agent reaches the wall.
 </p>
 
 <p>
-In our implementation of DQN on our agent we tried to follow examples done by <a href=https://stable-baselines3.readthedocs.io/en/master/>Stable-Baselines3</a>, which is a set of sourced RL algorithms implemented with PyTorch. We used their DQN algorithm on our agent to have the agent ‘learn’ the maze. To learn the maze required the agent to take many steps, so we felt training our agent on 1,000, 50,000, and 200,000 timesteps would suffice. After the agent is done learning, we would test the agent in the maze and record the results/ time it took for the agent to find the goal state. 
+In our implementation of DQN on our agent we tried to follow examples done by <a href="https://stable-baselines3.readthedocs.io/en/master/">Stable-Baselines3</a>, which is a set of sourced RL algorithms implemented with PyTorch. We used their DQN algorithm on our agent to have the agent ‘learn’ the maze. To learn the maze required the agent to take many steps, so we felt training our agent on 1,000, 50,000, and 200,000 timesteps would suffice. After the agent is done learning, we would test the agent in the maze and record the results/ time it took for the agent to find the goal state. 
 </p>
 
-<h3><b>A2C</b></h3>
+<h3>
+  <b>
+    A2C
+  </b>
+</h3>
 <p>
-Since we wanted to test our agent on multiple algorithms, the next one we chose to do was A2C. <a href=https://arxiv.org/abs/1602.01783>A2C</a> is an algorithm from Stable-Baselines3 that also uses deep RL, but uses asynchronous gradient descent to optimize the deep neural network controllers. To measure the performance of this algorithm, we will want to follow similar procedures above in which the agent learns on a variety of timesteps, measures the time it took, and then applies then tests the trained agent on its performance in the maze. 
+Since we wanted to test our agent on multiple algorithms, the next one we chose to do was <a href=https://arxiv.org/abs/1602.01783>A2C</a> (Advantage Actor Critic). This approach is unique in that in makes use of two neural networks, a “Critic” which measures the efficacy of an action and an “Actor” which tells the agent what actions to take. Explained in an <a href="https://towardsdatascience.com/advanced-reinforcement-learning-6d769f529eb3">article</a> on advanced reinforcement learning, the actor adjusts the probability of taking an action based on the estimated advantage of the current move and the critic updates the advantage based on the reward from following the actor’s policy.  A2C is an algorithm from Stable-Baselines3 that also uses deep RL, but uses a synchronous gradient descent to optimize the deep neural network controllers. The synchronous characteristic of A2C allows for our agent to complete a segment of the maze, update the global parameters, and then restart a new segment of the maze with parallel agents having the same parameters. This structure tells us how much more efficient a specific action is compared to the average action taken at the current state is (this is found by taking the average of the gradient).
+</p>
+<p>
+To measure the performance of this algorithm, we want to follow similar procedures above in which the agent learns on a variety of timesteps, measures the time it took to learn, and then the record the umber of steps and time it took for the agent to solve the maze.
 </p>
 
-<h3><b>Rewards</b></h3>
+<h3>
+  <b>
+    Rewards
+  </b>
+</h3>
 <p>
 In RL rewards are the primary tool an agent can use in finding its goal state. For our reward system, we wanted to use a basic procedure in which an agent measures the distance between itself and the goal state. If it is moving towards the goal state, the agent will receive a positive reward and if it moves away from the goal it receives a negative reward. If the agent is stuck in one place, like a corner, it will also receive a negative reward to encourage it to find other ways to the goal.
 </p>
